@@ -21,13 +21,13 @@ $("#currentTime").text(today.format("h:mm A"));
 
 
 // Moment is used here to color the timeblocks that will indicate the past, present, and future 
-function timeColor(){
+function timeColor() {
     var hour = moment().hour();
 
-    $(".timeblocks").each(function(){
+    $(".timeblocks").each(function () {
         var currentHour = parseInt($(this).attr("id"));
         console.log(this);
-    
+
 
         if (currentHour > hour) {
             $(this).addClass("future");
@@ -44,8 +44,11 @@ timeColor();
 // Function for clicking the save button
 var saveBtn = $(".saveBtn")
 
-saveBtn.on("click", function(){
+saveBtn.on("click", function () {
     // console.log(this);
     var time = (this).siblings(".hour").text();
     var desciption = (this).siblings(".description").text();
+
+    // This will save the description of your schedule into a local storage
+    localStorage.setItem(time, desciption);
 });
