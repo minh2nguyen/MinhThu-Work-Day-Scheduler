@@ -7,6 +7,7 @@ This application was designed using:
 - HTML
 - CSS 
 - jQuery 
+- Bootstrap
 
 To work with the date, time, and hours in the scheduler: 
 - Moment.js
