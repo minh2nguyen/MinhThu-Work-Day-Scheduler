@@ -26,7 +26,7 @@ function timeColor() {
 
     $(".timeblocks").each(function () {
         var currentHour = parseInt($(this).attr("id"));
-        console.log(this);
+        // console.log(this);
 
 
         if (currentHour > hour) {
@@ -47,8 +47,16 @@ var saveBtn = $(".saveBtn")
 saveBtn.on("click", function () {
     // console.log(this);
     var time = (this).siblings(".hour").text();
-    var desciption = (this).siblings(".description").text();
+    var description = (this).siblings(".description").val();
 
     // This will save the description of your schedule into a local storage
     localStorage.setItem(time, desciption);
 });
+
+function useScheduler(){
+    $(".hour").each(function(){
+        var currentHour = $(this).text();
+        var currentDescr = localStorage.getItem(currentHour);
+        console.log(this);
+    })
+}
