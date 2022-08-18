@@ -50,3 +50,16 @@ $(".saveBtn").on("click", function() {
     // This will save the description of your schedule into a local storage
     localStorage.setItem(time,text);
 })
+// This will load the saved data from localstorage for each hour in the scheduler 
+// It goes from 9 for 9AM to 17 for 5PM to follow the 12 hour conversion
+$("#9 .description").val(localStorage.getItem("9"));
+$("#10 .description").val(localStorage.getItem("10"));
+$("#11 .description").val(localStorage.getItem("11"));
+$("#12 .description").val(localStorage.getItem("12"));
+$("#12 .description").val(localStorage.getItem("13"));
+$("#14 .description").val(localStorage.getItem("14"));
+$("#15 .description").val(localStorage.getItem("15"));
+$("#16 .description").val(localStorage.getItem("16"));
+$("#17 .description").val(localStorage.getItem("17"));
+
+
