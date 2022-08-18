@@ -17,7 +17,7 @@
 // This will display the current date and time in the jumbotron at the top of the page
 const today = dayjs();
 $("#currentDay").text(today.format("🗓  " + "dddd, MMMM D, YYYY" + "  🗓"));
-$("#currentTime").text(today.format("⏰  " + "h:mm A" + "  ⏰" ));
+$("#currentTime").text(today.format("⏰  " + "h:mm A" + "  ⏰"));
 
 
 // Moment is used here to color the timeblocks that will indicate the past, present, and future 
@@ -42,13 +42,13 @@ function timeColor() {
 timeColor();
 
 // Function for clicking the save button
-$(".saveBtn").on("click", function() {
+$(".saveBtn").on("click", function () {
     // console.log(this);
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
     // This will save the description of your schedule into a local storage
-    localStorage.setItem(time,text);
+    localStorage.setItem(time, text);
 })
 // This will load the saved data from localstorage for each hour in the scheduler 
 // It goes from 9 for 9AM to 17 for 5PM to follow the 12 hour conversion
