@@ -3,7 +3,7 @@
 ## Description:
 
 ## Screenshot
-
+![Alt text](./assets/images/Scheduler%20Screenshot.png)
 ## Links: 
 Deployed Scheduler:https://minh2nguyen.github.io/MinhThu-Work-Day-Scheduler/
 
