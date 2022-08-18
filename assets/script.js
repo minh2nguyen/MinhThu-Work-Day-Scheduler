@@ -14,10 +14,10 @@
 // THEN the saved events persist
 
 // Dayjs is used here per instructors request
+// This will display the current date and time in the jumbotron at the top of the page
 const today = dayjs();
-// console.log(today.format("MMM D, YYYY"));
-$("#currentDay").text(today.format("🗓" + "dddd, MMMM D, YYYY" + "🗓"));
-$("#currentTime").text(today.format("h:mm A"));
+$("#currentDay").text(today.format("🗓  " + "dddd, MMMM D, YYYY" + "  🗓"));
+$("#currentTime").text(today.format("⏰  " + "h:mm A" + "  ⏰" ));
 
 
 // Moment is used here to color the timeblocks that will indicate the past, present, and future 
