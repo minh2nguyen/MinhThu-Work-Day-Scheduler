@@ -13,16 +13,16 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
-// Dayjs was used here per instructors request
+// Dayjs is used here per instructors request
 const today = dayjs();
 // console.log(today.format("MMM D, YYYY"));
 $("#currentDay").text(today.format("🗓" + "dddd, MMMM D, YYYY" + "🗓"));
 $("#currentTime").text(today.format("h:mm A"));
 
 
-
+// Moment is used here to color the timeblocks that will indicate the past, present, and future 
 function timeColor(){
-    var hour = moment().hours();
+    var hour = moment().hour();
 
     $(".timeblocks").each(function(){
         var currentHour = parseInt($(this).attr("id"));
@@ -40,3 +40,12 @@ function timeColor(){
 };
 
 timeColor();
+
+// Function for clicking the save button
+var saveBtn = $(".saveBtn")
+
+saveBtn.on("click", function(){
+    // console.log(this);
+    var time = (this).siblings(".hour").text();
+    var desciption = (this).siblings(".description").text();
+});
