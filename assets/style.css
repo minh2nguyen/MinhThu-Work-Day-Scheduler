@@ -66,6 +66,6 @@ textarea {
 }
 
 .saveBtn i:hover {
-  font-size: 30px;
+  font-size: 25px;
   transition: all 0.3s ease-in-out;
 }
