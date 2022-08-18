@@ -38,25 +38,15 @@ function timeColor() {
         }
     })
 };
-
+//Call the timeColor function 
 timeColor();
 
 // Function for clicking the save button
-var saveBtn = $(".saveBtn")
-
-saveBtn.on("click", function () {
+$(".saveBtn").on("click", function() {
     // console.log(this);
-    var time = (this).siblings(".hour").text();
-    var description = (this).siblings(".description").val();
+    var text = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
 
     // This will save the description of your schedule into a local storage
-    localStorage.setItem(time, desciption);
-});
-
-function useScheduler(){
-    $(".hour").each(function(){
-        var currentHour = $(this).text();
-        var currentDescr = localStorage.getItem(currentHour);
-        console.log(this);
-    })
-}
+    localStorage.setItem(time,text);
+})
